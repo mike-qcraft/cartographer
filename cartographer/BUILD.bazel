@@ -90,7 +90,10 @@ cc_library(
         ],
         exclude = TEST_LIBRARY_HDRS,
     ),
-    copts = ["-Wno-sign-compare"],
+    copts = [
+        "-Wno-sign-compare",
+        "-Wno-error=thread-safety-analysis",
+    ],
     includes = ["."],
     deps = [
         ":cc_protos",
